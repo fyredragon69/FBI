@@ -24,7 +24,7 @@ static list_item install_and_delete_ticket = {"Install and delete ticket", COLOR
 
 static list_item delete_dir = {"Delete", COLOR_TEXT, action_delete_dir};
 static list_item copy_all_contents = {"Copy all contents", COLOR_TEXT, NULL};
-static list_item delete_all_contents = {"Delete all contents", COLOR_TEXT, action_delete_dir_contents};
+// static list_item delete_all_contents = {"Delete all contents", COLOR_TEXT, action_delete_dir_contents};
 static list_item new_folder = {"New folder", COLOR_TEXT, action_new_folder};
 
 static list_item install_all_cias = {"Install all CIAs", COLOR_TEXT, action_install_cias};
@@ -33,7 +33,7 @@ static list_item delete_all_cias = {"Delete all CIAs", COLOR_TEXT, action_delete
 
 static list_item install_all_tickets = {"Install all tickets", COLOR_TEXT, action_install_tickets};
 static list_item install_and_delete_all_tickets = {"Install and delete all tickets", COLOR_TEXT, action_install_tickets_delete};
-static list_item delete_all_tickets = {"Delete all tickets", COLOR_TEXT, action_delete_dir_tickets};
+// static list_item delete_all_tickets = {"Delete all tickets", COLOR_TEXT, action_delete_dir_tickets};
 
 typedef struct {
     populate_files_data populateData;
@@ -139,11 +139,11 @@ static void files_action_update(ui_view* view, void* data, linked_list* items, l
             if(actionData->containsTickets) {
                 linked_list_add(items, &install_all_tickets);
                 linked_list_add(items, &install_and_delete_all_tickets);
-                linked_list_add(items, &delete_all_tickets);
+                // linked_list_add(items, &delete_all_tickets);
             }
 
             linked_list_add(items, &copy_all_contents);
-            linked_list_add(items, &delete_all_contents);
+            // linked_list_add(items, &delete_all_contents);
 
             linked_list_add(items, &new_folder);
 
